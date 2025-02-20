@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My personal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+"build": "rmdir /S /Q dist && mkdir dist && robocopy . dist /E /XD dist node_modules .git /XF package.json package-lock.json README.md",
+    "deploy": "npm run build && netlify deploy --prod --dir=dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srinivasarao90/srinu_portfolio.git"
+  },
+  "keywords": [],
+  "author": "Srinivasa Rao Rebbanaboina",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/srinivasarao90/srinu_portfolio/issues"
+  },
+  "homepage": "https://github.com/srinivasarao90/srinu_portfolio#readme"
+}
